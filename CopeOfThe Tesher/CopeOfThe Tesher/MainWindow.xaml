@@ -1,0 +1,78 @@
+﻿<Window x:Class="CopeOfThe_Tesher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CopeOfThe_Tesher"
+        mc:Ignorable="d"
+         Title="Ice Cream" Height="300" Width="525">
+    <Border Padding="20">
+        <!--Root Layout-->
+        <StackPanel Orientation="Vertical">
+            <!--First Layer-->
+            <TextBlock Text="Ice Cream Calculator" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+            <!--Second Layer-->
+            <Grid>
+                <!--Declaring a grid with 3 dynamically sized columns (equal width)-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <!--Column 1-->
+                <GroupBox Header="Sizes" FontSize="16" Grid.Column="0" Grid.Row="0">
+                    <StackPanel Orientation="Vertical">
+                        <RadioButton x:Name="rbtnSizeSmall" GroupName="rbtnSize" Content="Small ($1.00)" FontSize="12" IsChecked="True" Click="iceCreamOption_Click"/>
+                        <RadioButton x:Name="rbtnSizeMedium" GroupName="rbtnSize" Content="Medium ($2.00)" FontSize="12" Click="iceCreamOption_Click"/>
+                        <RadioButton x:Name="rbtnSizelarge" GroupName="rbtnSize" Content="Large ($3.00)" FontSize="12" Click="iceCreamOption_Click"/>
+                    </StackPanel>
+                </GroupBox>
+
+                <!--Column 2-->
+                <GroupBox Header="Flavours" FontSize="16" Grid.Column="1" Grid.Row="0">
+                    <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical">
+                        <RadioButton x:Name="rbtnChocolate" GroupName="rbtnFlavour" Content="Chocolate ($0.50)" FontSize="12" IsChecked="True" Click="iceCreamOption_Click"/>
+                        <RadioButton x:Name="rbtnRockyRoad" GroupName="rbtnFlavour" Content="Rocky Road ($1.50)" FontSize="12" Click="iceCreamOption_Click"/>
+                        <RadioButton x:Name="rbtnMintChip" GroupName="rbtnFlavour" Content="Mint Chip ($2.50)" FontSize="12" Click="iceCreamOption_Click"/>
+                    </StackPanel>
+                </GroupBox>
+
+                <!--Column 3-->
+                <GroupBox Header="Toppings" FontSize="16" Grid.Column="3" Grid.Row="0">
+                    <StackPanel Grid.Column="2" Grid.Row="0" Orientation="Vertical">
+                        <CheckBox x:Name="chkSmarties" Content="Smarties ($0.50)" FontSize="12" Click="iceCreamOption_Click"/>
+                        <CheckBox x:Name="chkOreo" Content="Oreo ($1.50)" FontSize="12" Click="iceCreamOption_Click"/>
+                        <CheckBox x:Name="chkSprinkles" Content="Sprinkles ($2.50)" FontSize="12" Click="iceCreamOption_Click"/>
+                        <CheckBox x:Name="chkCaramel" Content="Caramel ($2.00)" FontSize="12" Click="iceCreamOption_Click"/>
+                    </StackPanel>
+                </GroupBox>
+            </Grid>
+
+            <!--Third Layer-->
+            <Grid Grid.Column="0" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="1" Grid.Row="0" Text="Total Cost: " Margin="0,10,0,0"/>
+                <TextBox Grid.Column="2" Grid.Row="0" x:Name="txtTotalCost" IsEnabled="False" Margin="0,10,0,0"/>
+            </Grid>
+
+
+        </StackPanel>
+    </Border>
+</Window>

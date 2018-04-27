@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "deleteAllUsers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>deleteAllUsers</h2>
+@foreach (var person in ViewBag.List)
+{
+<li>@person.UserName</li>
+}
+

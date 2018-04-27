@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Sceen/endless.unity
+  isLoaded: 1
+  isActive: 1

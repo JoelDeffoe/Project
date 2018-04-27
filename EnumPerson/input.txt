@@ -1,0 +1,3 @@
+Jerry;Male;From18to35
+Maria;Female;Over65
+Timmy;NA;Below18

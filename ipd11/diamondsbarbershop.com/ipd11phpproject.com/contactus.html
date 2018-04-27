@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <title>Contact Us</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="lead">Contact Us</h1>
+            <div id="status-message"></div>
+            <form action="/api/contact/processData" method="post" id="contactus-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" name="name" id="name" aria-describedby="nameHelp" placeholder="Enter name">
+                    <small id="nameHelp" class="form-text text-muted">Your full name (i.e. John Doe).</small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter your email">
+                    <small id="emailHelp" class="form-text text-muted">Your email (i.e. email@domain.com).</small>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" class="form-control" name="phone" id="phone" aria-describedby="phoneHelp" placeholder="Enter your phone number">
+                    <small id="phoneHelp" class="form-text text-muted">Your phone number (i.e. 514-514-514).</small>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" class="form-control" name="subject" id="subject" aria-describedby="subjectHelp" placeholder="Enter why you want to contact us for">
+                    <small id="subjectHelp" class="form-text text-muted">Contact subject (i.e. General Inquiry).</small>
+                </div>
+                <div class="form-group">
+                    <label for="inquiries">Comments/questions</label>
+                    <textarea class="form-control" name="inquiries" id="inquiries" aria-describedby="inquiriesHelp" placeholder="Enter your inquiries"></textarea>
+                    <small id="inquiriesHelp" class="form-text text-muted">Contact inquiries (i.e. Where can I find available positions?).</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <script src="/assets/bootstrap/js/jquery-v3.2.1.min.js"></script>
+        <script src="/assets/bootstrap/js/popper.min.js"></script>
+        <script src="/assets/bootstrap/js/bootstrap-v4.0.0-beta.3.min.js"></script>
+        <script src="/assets/js/script.js"></script>
+    </body>
+</html>
